@@ -17,7 +17,7 @@ channels-redis>=4.1
 redis
 
 # Production server (optional but recommended)
-gunicorn
+daphne
 
 # Environment variables (optional but recommended)
 python-dotenv
