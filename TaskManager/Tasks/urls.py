@@ -11,4 +11,5 @@ urlpatterns = [
     path('task/<int:pk>/', views.task_detail, name='task_detail'),
     path('reschedule/<int:pk>/', views.reschedule_task, name='reschedule_task'), # ⭐ ADD THIS
     path('test-notify/', views.test_notification),
+    
 ]

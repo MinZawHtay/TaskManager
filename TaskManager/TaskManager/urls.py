@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.contrib.auth.views import LoginView, LogoutView
 from django.conf import settings
 from django.conf.urls.static import static
-from django.views.generic import TemplateView
+from Tasks.views import google_verify  # IMPORTANT
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,15 +28,8 @@ urlpatterns = [
     path('login/', LoginView.as_view(template_name='Tasks/login.html'), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     
-    # ✅ GOOGLE VERIFICATION (ADD HERE)
-    path(
-        'google1234567890abcdef.html',
-        TemplateView.as_view(
-            template_name='google1234567890abcdef.html',
-            content_type='text/html'
-        )
-    ),
-]
+    path("google1234567890abcdef.html", google_verify),
+
 ]
 
 # ✅ MEDIA FILES (ONLY IN DEVELOPMENT)
